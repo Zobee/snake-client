@@ -12,7 +12,26 @@ const connect = function () {
   conn.on("connect", (data) => {
     console.log("Successfully established connection to the server.")
     conn.write('Name: ZOB');
+
+    // setInterval(() => {
+    //   conn.write("Move: up")
+    // }, 50)
+    // const moves = ["up", "left", "up", "left"]
+    // let timeout = 500;
+    // for(let move of moves) {
+    //   setTimeout(() => {
+    //     conn.write(`Move: ${move}`)
+    //   }, timeout)
+    //   timeout+=50
+    // }
+
   })
+
+  /*
+  Registering multiple callbacks for the same event is totally valid. 
+  They will be triggered in the sequence that they were registered. 
+  */
+ 
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
