@@ -36,7 +36,7 @@ const connect = function () {
     console.log('Server says: ', data);
   });
   
-  console.log(conn)
+  //console.log(conn)
   return conn;
 };
 
