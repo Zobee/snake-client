@@ -21,6 +21,12 @@ const handleUserInput = function (data) {
       //console.log("Move: right");
       connection.write("Move: right");
       break;
+    case 'q':
+      connection.write("Say: 'Respecc'");
+      break;
+    case 'e':
+      connection.write("Say: 'Testing'");
+      break;
   }
 };
 
